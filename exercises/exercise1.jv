@@ -1,0 +1,48 @@
+pipeline AirportDataPipeline {
+
+    // Pipeline sequence: First, extract data from the source URL and interpret it
+    AirportDataExtractor
+        -> TextFileReader;
+
+    // Then, parse the CSV data and interpret it as a structured table, loading it into the database
+    TextFileReader
+        -> CSVDataParser
+        -> AirportDataTable
+        -> DatabaseLoader;
+
+
+    // Block to extract airport data from the URL source
+    block AirportDataExtractor oftype HttpExtractor {
+        url: "https://opendata.rhein-kreis-neuss.de/api/explore/v2.1/catalog/datasets/rhein-kreis-neuss-flughafen-weltweit/exports/csv?lang=en&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B";
+    }
+
+    // Block to interpret the extracted data as a text file
+    block TextFileReader oftype TextFileInterpreter { }
+
+    // Block to parse the text file content as CSV data
+    block CSVDataParser oftype CSVInterpreter {
+        delimiter: ";";  // Specifies the delimiter used in the CSV file
+    }
+
+    // Block to interpret the CSV data as a table with structured columns
+    block AirportDataTable oftype TableInterpreter {
+        header: true;  // Use the first row as the header
+        columns: [
+            "Lfd. Nummer" oftype integer,      // Sequential number
+            "Name des Flughafens" oftype text,  // Airport name
+            "Ort" oftype text,                  // City
+            "Land" oftype text,                 // Country
+            "IATA" oftype text,                 // IATA code
+            "ICAO" oftype text,                 // ICAO code
+            "Latitude" oftype decimal,          // Latitude in decimal format
+            "Longitude" oftype decimal,         // Longitude in decimal format
+            "Altitude" oftype integer           // Altitude in meters
+        ];
+    }
+
+    // Block to load the structured airport data table into an SQLite database
+    block DatabaseLoader oftype SQLiteLoader {
+        table: "airports";              // Name of the table in SQLite
+        file: "./exercises/airports.sqlite";  // File path for the SQLite database
+    }
+}

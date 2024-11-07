@@ -25,21 +25,29 @@ This analysis can provide evidence to public health officials regarding the bene
 Metadata URL: https://ourworldindata.org/covid-vaccinations
 
 Data URL: https://covid.ourworldindata.org/data/owid-covid-data.csv
+
 Data Type: CSV
+
 Description: Contains data on daily COVID-19 vaccinations, including total doses administered, population vaccinated, and fully vaccinated percentages. This will allow us to analyze vaccination coverage across countries.
 
 ### Datasource2: COVID-19 Infection Rates
 
 Metadata URL: https://github.com/CSSEGISandData/COVID-19
+
 Data URL: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
+
 Data Type: CSV
+
 Description: Contains daily confirmed COVID-19 case counts for countries worldwide, including North, Central, and South America. This dataset provides time-series data on infection rates, which can be used to analyze the spread of COVID-19 and compare trends across countries.
 
 ### Datasource3: COVID-19 Infection Rates
 
 Metadata URL: https://ourworldindata.org/covid-cases
+
 Data URL: https://covid.ourworldindata.org/data/owid-covid-data.csv
+
 Data Type: CSV
+
 Description: Provides daily COVID-19 infection rates for various countries. This includes new and cumulative case counts, which will be compared to vaccination rates to assess infection trends.
 
 ## Work Packages

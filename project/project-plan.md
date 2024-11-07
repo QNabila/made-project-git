@@ -29,18 +29,34 @@ Description: Contains data on daily COVID-19 vaccinations, including total doses
 
 ### Datasource2: COVID-19 Infection Rates
 
-Metadata URL: https://ourworldindata.org/covid-cases
-Data URL: https://covid.ourworldindata.org/data/owid-covid-data.csv
-Data Type: CSV
-Description: Provides daily COVID-19 infection rates for various countries. This includes new and cumulative case counts, which will be compared to vaccination rates to assess infection trends.
-
-### Datasource3: COVID-19 Infection Rates
-
 Metadata URL: https://github.com/CSSEGISandData/COVID-19
 Data URL: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
 Data Type: CSV
 Description: Contains daily confirmed COVID-19 case counts for countries worldwide, including North, Central, and South America. This dataset provides time-series data on infection rates, which can be used to analyze the spread of COVID-19 and compare trends across countries.
 
+### Datasource3: COVID-19 Infection Rates
+
+Metadata URL: https://ourworldindata.org/covid-cases
+Data URL: https://covid.ourworldindata.org/data/owid-covid-data.csv
+Data Type: CSV
+Description: Provides daily COVID-19 infection rates for various countries. This includes new and cumulative case counts, which will be compared to vaccination rates to assess infection trends.
+
 ## Work Packages
 
+1. Dataset Validation and Preparation [#1][i1]
+2. Data Integration [#2][i2]
+3. Exploratory Data Analysis (EDA) [#3][i3]
+4. Correlation and Regression Analysis [#4][i4]
+5. Reporting and Presentation [#5][i5]
 
+
+
+[i1]: https://github.com/QNabila/made-project-git/issues/1
+
+[i2]: https://github.com/QNabila/made-project-git/issues/2
+
+[i3]: https://github.com/QNabila/made-project-git/issues/3
+
+[i4]: https://github.com/QNabila/made-project-git/issues/4
+
+[i5]: https://github.com/QNabila/made-project-git/issues/5

@@ -23,6 +23,7 @@ This analysis can provide evidence to public health officials regarding the bene
 ### Datasource1: COVID-19 Vaccination Data
 
 Metadata URL: https://ourworldindata.org/covid-vaccinations
+
 Data URL: https://covid.ourworldindata.org/data/owid-covid-data.csv
 Data Type: CSV
 Description: Contains data on daily COVID-19 vaccinations, including total doses administered, population vaccinated, and fully vaccinated percentages. This will allow us to analyze vaccination coverage across countries.
